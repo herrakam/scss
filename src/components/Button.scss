@@ -11,10 +11,15 @@ $gray: gray;
   &:active {
     background: darken($color, 10%);
   }
+  &.outline {
+    background: none;
+    border: 1px solid $color;
+    color: $color;
+  }
 }
 
 .Button {
-  //   display: inline-flex;
+  display: inline-flex;
   color: white;
   font-weight: bold;
   outline: none;
@@ -50,5 +55,14 @@ $gray: gray;
   }
   & + & {
     margin-left: 1rem;
+    justify-content: center;
+  }
+  &.fullWidth {
+    width: 100%;
+    justify-content: center;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
