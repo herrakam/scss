@@ -1,7 +1,28 @@
 import React, { useState } from "react";
 import "./App.scss";
-import Button from "./components/Button";
-import Checkbox from "./components/Checkbox";
+// import Button from "./components/Button";
+// import Checkbox from "./components/Checkbox";
+import styled, { ThemeProvider } from "styled-components";
+import StyledButtons from "./components/StyledButtons";
+
+const Circle = styled.div`
+  width: 5rem;
+  height: 5rem;
+  background: ${(props) => props.color};
+  border-radius: 50%;
+  ${(props) =>
+    props.huge &&
+    `
+  height: 10rem;
+  width: 10rem;
+  `}
+`;
+
+const palette = {
+  blue: "#228be6",
+  gray: "#496057",
+  pink: "#f06595",
+};
 
 function App() {
   const [check, setCheck] = useState(false);
@@ -10,8 +31,15 @@ function App() {
     setCheck(e.target.checked);
   };
   return (
-    <div className="App">
-      <div>
+    <ThemeProvider theme={{ palette }}>
+      <div className="App">
+        <Circle color="skyblue" huge></Circle>
+        <Circle color="black"></Circle>
+        <StyledButtons>Button</StyledButtons>
+        <StyledButtons color="gray">Button</StyledButtons>
+        <StyledButtons color="pink">Button</StyledButtons>
+
+        {/* <div>
         <Checkbox onChange={onchange} checked={check}>
           다음 약관에 모두 동의
         </Checkbox>
@@ -67,8 +95,9 @@ function App() {
         >
           BUTTON
         </Button>
+      </div> */}
       </div>
-    </div>
+    </ThemeProvider>
   );
 }
 
