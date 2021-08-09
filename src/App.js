@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Button from "./components/Button";
+import Checkbox from "./components/Checkbox";
 
 function App() {
+  const [check, setCheck] = useState(false);
+
+  const onchange = (e) => {
+    setCheck(e.target.checked);
+  };
   return (
     <div className="App">
+      <div>
+        <Checkbox onChange={onchange} checked={check}>
+          다음 약관에 모두 동의
+        </Checkbox>
+      </div>
       <div className="buttons">
         <Button size="big">BUTTON</Button>
         <Button>BUTTON</Button>
