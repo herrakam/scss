@@ -46,7 +46,14 @@ function App() {
         <Button size="big" fullWidth color="gray">
           BUTTON
         </Button>
-        <Button size="big" fullWidth color="pink">
+        <Button
+          size="big"
+          fullWidth
+          color="pink"
+          onClick={() => {
+            console.log("클릭됨");
+          }}
+        >
           BUTTON
         </Button>
       </div>
