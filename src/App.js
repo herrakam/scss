@@ -58,63 +58,28 @@ function App() {
             Button
           </StyledButtons>
         </div>
-        {/* <div>
-        <Checkbox onChange={onchange} checked={check}>
-          다음 약관에 모두 동의
-        </Checkbox>
-      </div>
-      <div className="buttons">
-        <Button size="big">BUTTON</Button>
-        <Button>BUTTON</Button>
-        <Button size="small">BUTTON</Button>
-      </div>
-      <div className="buttons">
-        <Button size="big" color="gray">
-          BUTTON
-        </Button>
-        <Button color="gray">BUTTON</Button>
-        <Button size="small" color="gray">
-          BUTTON
-        </Button>
-      </div>
-      <div className="buttons">
-        <Button size="big" color="pink">
-          BUTTON
-        </Button>
-        <Button color="pink">BUTTON</Button>
-        <Button size="small" color="pink">
-          BUTTON
-        </Button>
-      </div>
-      <div className="buttons">
-        <Button size="big" outline>
-          BUTTON
-        </Button>
-        <Button outline color="gray">
-          BUTTON
-        </Button>
-        <Button size="small" outline color="pink">
-          BUTTON
-        </Button>
-      </div>
-      <div className="buttons">
-        <Button size="big" fullWidth>
-          BUTTON
-        </Button>
-        <Button size="big" fullWidth color="gray">
-          BUTTON
-        </Button>
-        <Button
-          size="big"
-          fullWidth
-          color="pink"
-          onClick={() => {
-            console.log("클릭됨");
-          }}
-        >
-          BUTTON
-        </Button>
-      </div> */}
+        <div className="buttons">
+          <StyledButtons size="large" outline>
+            Button
+          </StyledButtons>
+          <StyledButtons color="gray" outline>
+            Button
+          </StyledButtons>
+          <StyledButtons color="pink" size="small" outline>
+            Button
+          </StyledButtons>
+        </div>
+        <div className="buttons">
+          <StyledButtons size="large" fullWidth>
+            Button
+          </StyledButtons>
+          <StyledButtons color="gray" size="large" fullWidth>
+            Button
+          </StyledButtons>
+          <StyledButtons color="pink" size="large" fullWidth>
+            Button
+          </StyledButtons>
+        </div>
       </div>
     </ThemeProvider>
   );
