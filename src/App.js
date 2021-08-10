@@ -33,12 +33,31 @@ function App() {
   return (
     <ThemeProvider theme={{ palette }}>
       <div className="App">
-        <Circle color="skyblue" huge></Circle>
-        <Circle color="black"></Circle>
-        <StyledButtons>Button</StyledButtons>
-        <StyledButtons color="gray">Button</StyledButtons>
-        <StyledButtons color="pink">Button</StyledButtons>
-
+        {/* <Circle color="skyblue" huge></Circle>
+        <Circle color="black"></Circle> */}
+        <div className="buttons">
+          <StyledButtons size="large">Button</StyledButtons>
+          <StyledButtons>Button</StyledButtons>
+          <StyledButtons size="small">Button</StyledButtons>
+        </div>
+        <div className="buttons">
+          <StyledButtons color="gray" size="large">
+            Button
+          </StyledButtons>
+          <StyledButtons color="gray">Button</StyledButtons>
+          <StyledButtons color="gray" size="small">
+            Button
+          </StyledButtons>
+        </div>
+        <div className="buttons">
+          <StyledButtons color="pink" size="large">
+            Button
+          </StyledButtons>
+          <StyledButtons color="pink">Button</StyledButtons>
+          <StyledButtons color="pink" size="small">
+            Button
+          </StyledButtons>
+        </div>
         {/* <div>
         <Checkbox onChange={onchange} checked={check}>
           다음 약관에 모두 동의

@@ -16,6 +16,42 @@ const colorStyles = css`
     `;
   }}
 `;
+// const sizes = {
+//   large: {
+//     height: "3rem",
+//     fontSize: "1.25rem",
+//   },
+//   medium: {
+//     height: "2.25rem",
+//     fontSize: "1rem",
+//   },
+//   small: {
+//     height: "1.75rem",
+//     fontSize: "0.875rem",
+//   },
+// };
+
+const sizes = {
+  large: {
+    height: "3rem",
+    fontSize: "1.25rem",
+  },
+  medium: {
+    height: "2.25rem",
+    fontSize: "1rem",
+  },
+  small: {
+    height: "1.75rem",
+    fontSize: "0.875rem",
+  },
+};
+
+const sizeStyles = css`
+  ${({ size }) => css`
+    height: ${sizes[size].height};
+    font-size: ${sizes[size].fontSize};
+  `}
+`;
 
 const StyledButton = styled.button`
   display: inline-block;
@@ -28,19 +64,17 @@ const StyledButton = styled.button`
   padding: 0 1rem 0 1rem;
   transition: 0.8s;
 
-  height: 2.25rem;
-  font-size: 1rem;
-
   & + & {
     margin-left: 1rem;
   }
 
   ${colorStyles}
+  ${sizeStyles}
 `;
 
-function StyledButtons({ children, color, ...rest }) {
+function StyledButtons({ children, color, size, ...rest }) {
   return (
-    <StyledButton color={color} {...rest}>
+    <StyledButton color={color} size={size} {...rest}>
       {children}
     </StyledButton>
   );
@@ -48,5 +82,6 @@ function StyledButtons({ children, color, ...rest }) {
 
 StyledButton.defaultProps = {
   color: "blue",
+  size: "medium",
 };
 export default StyledButtons;
