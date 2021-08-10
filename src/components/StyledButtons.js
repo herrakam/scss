@@ -58,6 +58,7 @@ const fullWidthStyle = css`
       justify-content: center;
       & + & {
         margin-left: 0;
+
         margin-top: 1rem;
       }
     `}
@@ -73,6 +74,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   padding: 0 1rem 0 1rem;
   transition: 0.8s;
+  margin-right: 1rem;
 
   ${sizeStyles}
   ${colorStyles}

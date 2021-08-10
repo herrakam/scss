@@ -18,6 +18,12 @@ const Circle = styled.div`
   `}
 `;
 
+const Buttons = styled.div`
+  & + & {
+    margin-top: 1rem;
+  }
+`;
+
 const palette = {
   blue: "#228be6",
   gray: "#496057",
@@ -35,12 +41,12 @@ function App() {
       <div className="App">
         {/* <Circle color="skyblue" huge></Circle>
         <Circle color="black"></Circle> */}
-        <div className="buttons">
+        <Buttons>
           <StyledButtons size="large">Button</StyledButtons>
           <StyledButtons>Button</StyledButtons>
           <StyledButtons size="small">Button</StyledButtons>
-        </div>
-        <div className="buttons">
+        </Buttons>
+        <Buttons>
           <StyledButtons color="gray" size="large">
             Button
           </StyledButtons>
@@ -48,8 +54,8 @@ function App() {
           <StyledButtons color="gray" size="small">
             Button
           </StyledButtons>
-        </div>
-        <div className="buttons">
+        </Buttons>
+        <Buttons>
           <StyledButtons color="pink" size="large">
             Button
           </StyledButtons>
@@ -57,8 +63,8 @@ function App() {
           <StyledButtons color="pink" size="small">
             Button
           </StyledButtons>
-        </div>
-        <div className="buttons">
+        </Buttons>
+        <Buttons>
           <StyledButtons size="large" outline>
             Button
           </StyledButtons>
@@ -68,8 +74,8 @@ function App() {
           <StyledButtons color="pink" size="small" outline>
             Button
           </StyledButtons>
-        </div>
-        <div className="buttons">
+        </Buttons>
+        <Buttons>
           <StyledButtons size="large" fullWidth>
             Button
           </StyledButtons>
@@ -79,7 +85,7 @@ function App() {
           <StyledButtons color="pink" size="large" fullWidth>
             Button
           </StyledButtons>
-        </div>
+        </Buttons>
       </div>
     </ThemeProvider>
   );
